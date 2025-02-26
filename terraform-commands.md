@@ -27,4 +27,3 @@
 - `terraform graph` → Genera un gráfico de dependencias en formato DOT.
 - `terraform version` → Muestra la versión de Terraform instalada.
 - `terraform providers` → Lista los proveedores usados en la configuración.
-```
