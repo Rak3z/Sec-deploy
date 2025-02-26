@@ -36,4 +36,4 @@ The solution should follow the following diagram
   
 ## Other usefull commands
 ------------
-* I have notes in spanish of a quicklist of the commands I found useful using Terraform: [terraform-commands.md]
+* I have notes in spanish of a quicklist of the commands I found useful using Terraform: [terraform-commands](terraform-commands.md "comandos utiles")
