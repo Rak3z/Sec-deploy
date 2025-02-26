@@ -12,6 +12,7 @@ The deploy is going to use the following resources:
 * Elastic IP's
 * Cloud friewalls
 
+![Sol Diagram](diagrama_seguridad.jpg "Solution Diagram")
 
 ## Steps
 ------------
