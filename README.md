@@ -1,6 +1,16 @@
 # Sec-deploy
 ------------
-a security deploy on huawei cloud using terraform
+this is a simple security deploy on huawei cloud using terraform.
+The deploy are going to use the following resources:
+
+* VPC's
+* Subnets
+* Security groups
+* Entreprise router
+* Elastic cloud server
+* Elastic IP's
+* Cloud friewalls
+
 
 ## Steps
 ------------
