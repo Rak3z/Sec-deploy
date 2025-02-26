@@ -33,3 +33,7 @@ The solution should follow the following diagram
 * Add your AK/SK data and region to the **terraform.tfvars** terraform file
 * Don't forget initialize your environment with: `terraform init`
 * Apply the script into the cloud using: `terraform apply`
+  
+## Other usefull commands
+------------
+* I have notes in spanish of a quicklist of the commands I found useful using Terraform: [terraform-commands.md]
