@@ -11,7 +11,8 @@ The deploy is going to use the following resources:
 * Elastic cloud server
 * Elastic IP's
 * Cloud friewalls
-
+  
+The solution should follow the following diagram
 ![Sol Diagram](diagrama_seguridad.jpg "Solution Diagram")
 
 ## Steps
