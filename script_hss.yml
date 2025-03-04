@@ -1,0 +1,36 @@
+---
+- name: Instalar agente y configurar hostguard
+  hosts: all
+  become: yes
+  tasks:
+    - name: Descargar el script de instalación del agente
+      get_url:
+        url: 'https://hss-agent.la-south-2.myhuaweicloud.com:10180/package/agent/linux/install/agent_Install.sh'
+        dest: '~/agent_Install.sh'
+        validate_certs: no
+
+    - name: dar permisos al ejecutable
+      shell: chmod +x agent_Install.sh
+
+    - name: Crear el archivo de configuración hostguard_setup_config.conf
+      copy:
+        dest: hostguard_setup_config.conf
+        content: |
+          MASTER_IP=hss-agent.la-south-2.myhuaweicloud.com:10180
+          SLAVE_IP=hss-agent-slave.la-south-2.myhuaweicloud.com:10180
+          ORG_ID=
+
+    - name: Ejecutar el script de instalación del agente
+      shell: sudo ./agent_Install.sh
+
+    - name: Eliminar el script de instalación del agente
+      file:
+        path: ~/agent_Install.sh
+        state: absent
+
+#curl -k -O 'https://hss-agent.la-south-2.myhuaweicloud.com:10180/package/agent/linux/install/agent_Install.sh' 
+#&& echo 'MASTER_IP=hss-agent.la-south-2.myhuaweicloud.com:10180' > hostguard_setup_config.conf
+#&& echo 'SLAVE_IP=hss-agent-slave.la-south-2.myhuaweicloud.com:10180' >> hostguard_setup_config.conf 
+#&& echo 'ORG_ID=' >> hostguard_setup_config.conf 
+#&& bash agent_Install.sh 
+#&& rm -f  agent_Install.sh
