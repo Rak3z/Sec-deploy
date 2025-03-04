@@ -41,5 +41,5 @@ The solution should follow the following diagram
 ## subprograms
 ------------
 * there is two folders in this proyect:
-  1.  *WAF+DNS:* is for the WAF+DNS deploy that currently is not working 
-  2.  *Ansible:* is for the setting of HSS in the bob ECS using Ansible
+  1.  **WAF&DNS:** is for the WAF+DNS deploy that currently is not working 
+  2.  **Ansible:** is for the setting of HSS in the bob ECS using Ansible
