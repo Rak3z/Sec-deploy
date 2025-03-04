@@ -37,3 +37,9 @@ The solution should follow the following diagram
 ## Other usefull commands
 ------------
 * I have notes in spanish of a quicklist of the commands I found useful using Terraform: [terraform-commands](terraform-commands.md "comandos utiles")
+
+## subprograms
+------------
+* there is two folders in this proyect:
+  1.  *WAF+DNS:* is for the WAF+DNS deploy that currently is not working 
+  2.  *Ansible:* is for the setting of HSS in the bob ECS using Ansible
