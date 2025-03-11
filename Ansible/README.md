@@ -21,6 +21,6 @@ sudo apt upgrade
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8
 ```
-after excecuting the terraform script we will have to excecute the command `terraform output --raw eipBob` to get the output made by terraform and put it into an inventory file to be procesable by ansible, another issue that can happen is windows writting non readeable characters, so we can use the following command to translate them: `iconv -f ISO-8859-1 -t //IGNORE inventory -o inventory`.
+after excecuting the terraform script we will have to excecute the command `terraform output --raw eipBob` to get the output made by terraform and put it into an inventory file to be procesable by ansible, another issue that can happen is windows writting non readeable characters, so we can use the following command to translate them: `iconv -sc -f UTF-16LE -t UTF-8//IGNORE inventory -o inventory;sed -i '1 s/^\xEF\xBB\xBF//' inventory`.
 
 then we can excecute `ansible-playbook -i inventory script_hss.yml` to set the configuration
