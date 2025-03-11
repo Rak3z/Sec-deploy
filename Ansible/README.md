@@ -15,11 +15,13 @@ after it make sure the key has the correct permissions, otherwise it would throw
 
 after this we can run the terraform file in this folder and will inyect the following commands to an ECS:
 ```
-#!/bin/bash
-sudo apt update
-sudo apt upgrade
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.8
+#!bin/bash
+sudo apt update -y
+sudo apt upgrade -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install python3.8 -y
 ```
 after excecuting the terraform script we will have to excecute the command `terraform output --raw eipBob` to get the output made by terraform and put it into an inventory file to be procesable by ansible, another issue that can happen is windows writting non readeable characters, so we can use the following command to translate them: `iconv -sc -f UTF-16LE -t UTF-8//IGNORE inventory -o inventory;sed -i '1 s/^\xEF\xBB\xBF//' inventory`.
 
